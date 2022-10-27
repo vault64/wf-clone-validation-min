@@ -175,14 +175,8 @@ process report {
     label "wfplasmid"
     cpus 1
     input:
-        path "downsampled_stats/*"
-        path final_status
         path "per_barcode_stats/*"
         path "host_filter_stats/*"
-        path "versions/*"
-        path "params.json"
-        path plannotate_json
-        path inserts_json
         path lengths
     output:
         path "wf-clone-validation-*.html", emit: html
